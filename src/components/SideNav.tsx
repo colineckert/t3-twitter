@@ -1,7 +1,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
-export default function SideNav() {
+export function SideNav() {
   const session = useSession();
   const user = session.data?.user;
 
