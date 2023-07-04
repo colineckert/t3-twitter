@@ -2,7 +2,7 @@ import { ProfileImage } from './ProfileImage';
 import { Button } from './Button';
 import { useSession } from 'next-auth/react';
 import {
-  FormEvent,
+  type FormEvent,
   useCallback,
   useLayoutEffect,
   useRef,
@@ -63,7 +63,7 @@ function Form() {
 
 export function NewTweetForm() {
   const session = useSession();
-  if (session.status !== 'authenticated') return;
+  if (session.status !== 'authenticated') return null;
 
   return <Form />;
 }
